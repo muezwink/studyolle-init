@@ -29,4 +29,7 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/java/com/studyolle/domain/Account.java
+
+### NPM ###
+src/main/resources/static/node_modules
+src/main/resources/static/node
