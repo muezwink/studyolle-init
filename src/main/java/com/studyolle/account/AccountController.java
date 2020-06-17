@@ -57,8 +57,7 @@ public class AccountController {
             return view;
         }
 
-        account.completeSignUp();
-        accountService.login(account);
+        accountService.completeSignUp(account);
         model.addAttribute("numberOfUser", accountRepository.count());
         model.addAttribute("nickname", account.getNickname());
         return view;
@@ -93,4 +92,5 @@ public class AccountController {
         model.addAttribute("isOwner", byNickname.equals(account));
         return "account/profile";
     }
+
 }
