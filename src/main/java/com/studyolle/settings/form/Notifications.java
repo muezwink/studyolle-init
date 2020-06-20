@@ -1,10 +1,9 @@
-package com.studyolle.settings;
+package com.studyolle.settings.form;
 
 import lombok.Data;
 
 @Data
-public class Notifications
-{
+public class Notifications {
 
     private boolean studyCreatedByEmail;
 

@@ -1,5 +1,7 @@
-package com.studyolle.account;
+package com.studyolle.account.validator;
 
+import com.studyolle.account.AccountRepository;
+import com.studyolle.account.form.SignUpForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -7,8 +9,8 @@ import org.springframework.validation.Validator;
 
 @Component
 @RequiredArgsConstructor
-public class SignUpFormValidator implements Validator
-{
+public class SignUpFormValidator implements Validator {
+
     private final AccountRepository accountRepository;
 
     @Override
@@ -27,5 +29,4 @@ public class SignUpFormValidator implements Validator
             errors.rejectValue("nickname", "invalid.nickname", new Object[]{signUpForm.getEmail()}, "이미 사용중인 닉네임입니다.");
         }
     }
-
 }
